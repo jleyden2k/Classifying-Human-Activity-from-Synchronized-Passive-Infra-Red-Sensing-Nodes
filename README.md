@@ -103,3 +103,31 @@ and a confusion matrix was generated to provide detailed
 insight into the model’s classification behavior. This was
 supplemented with accuracy, precision, recall, f1 score, and
 support metrics.
+
+## Results and Discussions
+
+After training the neural network model for 20 epochs, its
+performance was evaluated on the validation/test set using
+standard classification metrics. The model concluded its training
+loop with loss values ranging from 0.2961 to 0.0104. Over the
+course of the 20 epochs, these values generally trended
+downward, reaching its minimum at epoch 17 and hovering
+around that area.
+
+Once training was completed, the model was evaluated with
+torch.no_grad to print its test accuracy, calculated by dividing
+the total number of correct predictions by the total number of
+samples, then multiplied by 100 to convert away into percentile.
+The model boasted an incredible test accuracy of 99.51%.
+Further, this result was supported by a calculation of the
+classification report, which contained the associated precision,
+recall, f1-score, and support metrics. 
+
+Overall, the application of a multilayered perceptron to
+classify the PIRvision dataset was immensely successful. By
+implementing a model with a common PyTorch framework, in
+combination with Scikit-Learn’s immense toolkit and Pandas
+data frame flexibility, the model was able to predict the result of
+the passive infrared sensors with less than a 1% margin of error,
+Achieving a total test accuracy of 99.51% indicates a nearperfect relationship as discovered by the model, and shows great
+promise in its utilization within future projects.
